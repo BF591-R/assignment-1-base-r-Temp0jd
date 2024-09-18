@@ -166,8 +166,6 @@ summarize_matrix <- function(x, na.rm=TRUE) {
     return(result_df)
 }
 
-
-
 #Bonus
 
 

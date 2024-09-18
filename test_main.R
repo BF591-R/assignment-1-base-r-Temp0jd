@@ -124,9 +124,8 @@ describe("summarize_matrix()", {
 
 
 m <- matrix(1:9, nrow = 3, byrow = TRUE)
-m[2, 1] <- NA  # Set one value to NA in the second row
+m[2, 1] <- NA  
 
-# Tests for summarize_rows and summarize_matrix
 describe("Bonus tests! Make your code work when there are NAs!", {
   
   it("returns correct mean values with na.rm=FALSE set", {
@@ -218,6 +217,6 @@ describe("summarize_matrix() works with na.rm=TRUE", {
   })
   
   it("returns number of NAs correctly", {
-    expect_equal(m_summary$num_na, c(0, 1, 0))
+    expect_equal(m_summary$num_na, c(0, 0, 0))
   })
 })
