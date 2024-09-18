@@ -108,8 +108,8 @@ row_medians <- function(x) {
 #' [1] 1 4 7
 #' summarize_rows(m, mean)
 #' [1] 2 5 8
-summarize_rows <- function(x, fn, na.rm=FALSE) {
-    return(apply(x,1,fn,na.rm=na.rm))
+summarize_rows <- function(x, fn, na.rm=TRUE) {
+  return(apply(x, 1, fn, na.rm=na.rm))
 }
 
 #' Summarize matrix rows into data frame
@@ -149,7 +149,7 @@ summarize_rows <- function(x, fn, na.rm=FALSE) {
 #' 3 -0.09040182 1.027559 -0.02774705 -3.026888 2.353087      130              54      0
 #' 4  0.09518138 1.030461  0.11294781 -3.409049 2.544992       90              72      0
 
-summarize_matrix <- function(x, na.rm=FALSE) {
+summarize_matrix <- function(x, na.rm=TRUE) {
     result<- t(apply(x,1,function(x){
       c(mean=mean(x,na.rm = na.rm),
         stdev=sd(x,na.rm = na.rm),
@@ -166,6 +166,9 @@ summarize_matrix <- function(x, na.rm=FALSE) {
     return(result_df)
 }
 
+
+
+#Bonus
 
 
 
